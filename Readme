@@ -1,0 +1,2 @@
+To build the program run the next command: cmake -DCMAKE_GENERATOR_PLATFORM=x64
+Para construir el programa se necesita una arquitectura de 64 bits.
