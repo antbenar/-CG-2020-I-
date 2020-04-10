@@ -1,2 +1,7 @@
-To build the program run the next command: cmake -DCMAKE_GENERATOR_PLATFORM=x64
-Para construir el programa se necesita una arquitectura de 64 bits.
+Autor: Anthony Benavides arquitectura
+Cruso: Computación Gráfica
+Semestre: VII
+
+
+Para construir el programa usar el siguiente comando: cmake -DCMAKE_GENERATOR_PLATFORM=x64
+El programa está implementado en una arquitectura de 64 bits.
