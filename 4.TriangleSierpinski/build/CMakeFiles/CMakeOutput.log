@@ -1,0 +1,338 @@
+The system is: Windows - 6.3.9600 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler:  
+Build flags: 
+Id flags:  
+
+The output was:
+0
+Microsoft (R) Build Engine, versi�n 14.0.25420.1
+Copyright (C) Microsoft Corporation. Todos los derechos reservados.
+
+Compilaci�n iniciada a las 28/04/2020 16:28:15.
+Proyecto "C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\3.8.1\CompilerIdC\CompilerIdC.vcxproj" en nodo 1 (destinos predeterminados).
+PrepareForBuild:
+  Creando directorio "Debug\".
+  Creando directorio "Debug\CompilerIdC.tlog\".
+InitializeBuildStatus:
+  Se crear� "Debug\CompilerIdC.tlog\unsuccessfulbuild" porque se especific� "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /nologo /W0 /WX- /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TC /errorReport:queue CMakeCCompilerId.c
+  CMakeCCompilerId.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X64 Debug\CMakeCCompilerId.obj
+  CompilerIdC.vcxproj -> C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\3.8.1\CompilerIdC\.\CompilerIdC.exe
+PostBuildEvent:
+  for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+  :VCEnd
+  CMAKE_C_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\cl.exe
+FinalizeBuildStatus:
+  Se eliminar� el archivo "Debug\CompilerIdC.tlog\unsuccessfulbuild".
+  Aplicando tarea Touch a "Debug\CompilerIdC.tlog\CompilerIdC.lastbuildstate".
+Compilaci�n del proyecto terminada "C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\3.8.1\CompilerIdC\CompilerIdC.vcxproj" (destinos predeterminados).
+
+Compilaci�n correcta.
+    0 Advertencia(s)
+    0 Errores
+
+Tiempo transcurrido 00:00:24.99
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+
+The C compiler identification is MSVC, found in "C:/Users/Anthony/Desktop/Grafica/-CG-2020-I-/4.TriangleSierpinski/build/CMakeFiles/3.8.1/CompilerIdC/CompilerIdC.exe"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler:  
+Build flags: 
+Id flags:  
+
+The output was:
+0
+Microsoft (R) Build Engine, versi�n 14.0.25420.1
+Copyright (C) Microsoft Corporation. Todos los derechos reservados.
+
+Compilaci�n iniciada a las 28/04/2020 16:28:44.
+Proyecto "C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\3.8.1\CompilerIdCXX\CompilerIdCXX.vcxproj" en nodo 1 (destinos predeterminados).
+PrepareForBuild:
+  Creando directorio "Debug\".
+  Creando directorio "Debug\CompilerIdCXX.tlog\".
+InitializeBuildStatus:
+  Se crear� "Debug\CompilerIdCXX.tlog\unsuccessfulbuild" porque se especific� "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /nologo /W0 /WX- /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /errorReport:queue CMakeCXXCompilerId.cpp
+  CMakeCXXCompilerId.cpp
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdCXX.lib" /MACHINE:X64 Debug\CMakeCXXCompilerId.obj
+  CompilerIdCXX.vcxproj -> C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\3.8.1\CompilerIdCXX\.\CompilerIdCXX.exe
+PostBuildEvent:
+  for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+  :VCEnd
+  CMAKE_CXX_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\cl.exe
+FinalizeBuildStatus:
+  Se eliminar� el archivo "Debug\CompilerIdCXX.tlog\unsuccessfulbuild".
+  Aplicando tarea Touch a "Debug\CompilerIdCXX.tlog\CompilerIdCXX.lastbuildstate".
+Compilaci�n del proyecto terminada "C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\3.8.1\CompilerIdCXX\CompilerIdCXX.vcxproj" (destinos predeterminados).
+
+Compilaci�n correcta.
+    0 Advertencia(s)
+    0 Errores
+
+Tiempo transcurrido 00:00:00.89
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+
+The CXX compiler identification is MSVC, found in "C:/Users/Anthony/Desktop/Grafica/-CG-2020-I-/4.TriangleSierpinski/build/CMakeFiles/3.8.1/CompilerIdCXX/CompilerIdCXX.exe"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: C:/Users/Anthony/Desktop/Grafica/-CG-2020-I-/4.TriangleSierpinski/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_1d7c7.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine, versión 14.0.25420.1
+Copyright (C) Microsoft Corporation. Todos los derechos reservados.
+
+Compilación iniciada a las 28/04/2020 16:28:45.
+Proyecto "C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\CMakeTmp\cmTC_1d7c7.vcxproj" en nodo 1 (destinos predeterminados).
+PrepareForBuild:
+  Creando directorio "cmTC_1d7c7.dir\Debug\".
+  Creando directorio "C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\CMakeTmp\Debug\".
+  Creando directorio "cmTC_1d7c7.dir\Debug\cmTC_1d7c7.tlog\".
+InitializeBuildStatus:
+  Se creará "cmTC_1d7c7.dir\Debug\cmTC_1d7c7.tlog\unsuccessfulbuild" porque se especificó "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1d7c7.dir\Debug\\" /Fd"cmTC_1d7c7.dir\Debug\vc140.pdb" /Gd /TC /errorReport:queue "C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\CMakeTmp\testCCompiler.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24215.1 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1d7c7.dir\Debug\\" /Fd"cmTC_1d7c7.dir\Debug\vc140.pdb" /Gd /TC /errorReport:queue "C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\CMakeTmp\testCCompiler.c"
+  
+  testCCompiler.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\CMakeTmp\Debug\cmTC_1d7c7.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Anthony/Desktop/Grafica/-CG-2020-I-/4.TriangleSierpinski/build/CMakeFiles/CMakeTmp/Debug/cmTC_1d7c7.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Anthony/Desktop/Grafica/-CG-2020-I-/4.TriangleSierpinski/build/CMakeFiles/CMakeTmp/Debug/cmTC_1d7c7.lib" /MACHINE:X64   /machine:x64 cmTC_1d7c7.dir\Debug\testCCompiler.obj
+  cmTC_1d7c7.vcxproj -> C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\CMakeTmp\Debug\cmTC_1d7c7.exe
+FinalizeBuildStatus:
+  Se eliminará el archivo "cmTC_1d7c7.dir\Debug\cmTC_1d7c7.tlog\unsuccessfulbuild".
+  Aplicando tarea Touch a "cmTC_1d7c7.dir\Debug\cmTC_1d7c7.tlog\cmTC_1d7c7.lastbuildstate".
+Compilación del proyecto terminada "C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\CMakeTmp\cmTC_1d7c7.vcxproj" (destinos predeterminados).
+
+Compilación correcta.
+    0 Advertencia(s)
+    0 Errores
+
+Tiempo transcurrido 00:00:07.18
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: C:/Users/Anthony/Desktop/Grafica/-CG-2020-I-/4.TriangleSierpinski/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_722f2.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine, versión 14.0.25420.1
+Copyright (C) Microsoft Corporation. Todos los derechos reservados.
+
+Compilación iniciada a las 28/04/2020 16:29:04.
+Proyecto "C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\CMakeTmp\cmTC_722f2.vcxproj" en nodo 1 (destinos predeterminados).
+PrepareForBuild:
+  Creando directorio "cmTC_722f2.dir\Debug\".
+  Creando directorio "C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\CMakeTmp\Debug\".
+  Creando directorio "cmTC_722f2.dir\Debug\cmTC_722f2.tlog\".
+InitializeBuildStatus:
+  Se creará "cmTC_722f2.dir\Debug\cmTC_722f2.tlog\unsuccessfulbuild" porque se especificó "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_722f2.dir\Debug\\" /Fd"cmTC_722f2.dir\Debug\vc140.pdb" /Gd /TC /errorReport:queue "C:\Program Files (x86)\CMake\share\cmake-3.8\Modules\CMakeCCompilerABI.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24215.1 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_722f2.dir\Debug\\" /Fd"cmTC_722f2.dir\Debug\vc140.pdb" /Gd /TC /errorReport:queue "C:\Program Files (x86)\CMake\share\cmake-3.8\Modules\CMakeCCompilerABI.c"
+  
+  CMakeCCompilerABI.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\CMakeTmp\Debug\cmTC_722f2.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Anthony/Desktop/Grafica/-CG-2020-I-/4.TriangleSierpinski/build/CMakeFiles/CMakeTmp/Debug/cmTC_722f2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Anthony/Desktop/Grafica/-CG-2020-I-/4.TriangleSierpinski/build/CMakeFiles/CMakeTmp/Debug/cmTC_722f2.lib" /MACHINE:X64   /machine:x64 cmTC_722f2.dir\Debug\CMakeCCompilerABI.obj
+  cmTC_722f2.vcxproj -> C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\CMakeTmp\Debug\cmTC_722f2.exe
+FinalizeBuildStatus:
+  Se eliminará el archivo "cmTC_722f2.dir\Debug\cmTC_722f2.tlog\unsuccessfulbuild".
+  Aplicando tarea Touch a "cmTC_722f2.dir\Debug\cmTC_722f2.tlog\cmTC_722f2.lastbuildstate".
+Compilación del proyecto terminada "C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\CMakeTmp\cmTC_722f2.vcxproj" (destinos predeterminados).
+
+Compilación correcta.
+    0 Advertencia(s)
+    0 Errores
+
+Tiempo transcurrido 00:00:00.85
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: C:/Users/Anthony/Desktop/Grafica/-CG-2020-I-/4.TriangleSierpinski/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_0ee61.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine, versión 14.0.25420.1
+Copyright (C) Microsoft Corporation. Todos los derechos reservados.
+
+Compilación iniciada a las 28/04/2020 16:29:05.
+Proyecto "C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\CMakeTmp\cmTC_0ee61.vcxproj" en nodo 1 (destinos predeterminados).
+PrepareForBuild:
+  Creando directorio "cmTC_0ee61.dir\Debug\".
+  Creando directorio "C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\CMakeTmp\Debug\".
+  Creando directorio "cmTC_0ee61.dir\Debug\cmTC_0ee61.tlog\".
+InitializeBuildStatus:
+  Se creará "cmTC_0ee61.dir\Debug\cmTC_0ee61.tlog\unsuccessfulbuild" porque se especificó "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_0ee61.dir\Debug\\" /Fd"cmTC_0ee61.dir\Debug\vc140.pdb" /Gd /TP /errorReport:queue "C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24215.1 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_0ee61.dir\Debug\\" /Fd"cmTC_0ee61.dir\Debug\vc140.pdb" /Gd /TP /errorReport:queue "C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx"
+  
+  testCXXCompiler.cxx
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\CMakeTmp\Debug\cmTC_0ee61.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Anthony/Desktop/Grafica/-CG-2020-I-/4.TriangleSierpinski/build/CMakeFiles/CMakeTmp/Debug/cmTC_0ee61.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Anthony/Desktop/Grafica/-CG-2020-I-/4.TriangleSierpinski/build/CMakeFiles/CMakeTmp/Debug/cmTC_0ee61.lib" /MACHINE:X64   /machine:x64 cmTC_0ee61.dir\Debug\testCXXCompiler.obj
+  cmTC_0ee61.vcxproj -> C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\CMakeTmp\Debug\cmTC_0ee61.exe
+FinalizeBuildStatus:
+  Se eliminará el archivo "cmTC_0ee61.dir\Debug\cmTC_0ee61.tlog\unsuccessfulbuild".
+  Aplicando tarea Touch a "cmTC_0ee61.dir\Debug\cmTC_0ee61.tlog\cmTC_0ee61.lastbuildstate".
+Compilación del proyecto terminada "C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\CMakeTmp\cmTC_0ee61.vcxproj" (destinos predeterminados).
+
+Compilación correcta.
+    0 Advertencia(s)
+    0 Errores
+
+Tiempo transcurrido 00:00:00.77
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: C:/Users/Anthony/Desktop/Grafica/-CG-2020-I-/4.TriangleSierpinski/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_13b2c.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine, versión 14.0.25420.1
+Copyright (C) Microsoft Corporation. Todos los derechos reservados.
+
+Compilación iniciada a las 28/04/2020 16:29:06.
+Proyecto "C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\CMakeTmp\cmTC_13b2c.vcxproj" en nodo 1 (destinos predeterminados).
+PrepareForBuild:
+  Creando directorio "cmTC_13b2c.dir\Debug\".
+  Creando directorio "C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\CMakeTmp\Debug\".
+  Creando directorio "cmTC_13b2c.dir\Debug\cmTC_13b2c.tlog\".
+InitializeBuildStatus:
+  Se creará "cmTC_13b2c.dir\Debug\cmTC_13b2c.tlog\unsuccessfulbuild" porque se especificó "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_13b2c.dir\Debug\\" /Fd"cmTC_13b2c.dir\Debug\vc140.pdb" /Gd /TP /errorReport:queue "C:\Program Files (x86)\CMake\share\cmake-3.8\Modules\CMakeCXXCompilerABI.cpp"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24215.1 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_13b2c.dir\Debug\\" /Fd"cmTC_13b2c.dir\Debug\vc140.pdb" /Gd /TP /errorReport:queue "C:\Program Files (x86)\CMake\share\cmake-3.8\Modules\CMakeCXXCompilerABI.cpp"
+  
+  CMakeCXXCompilerABI.cpp
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\CMakeTmp\Debug\cmTC_13b2c.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Anthony/Desktop/Grafica/-CG-2020-I-/4.TriangleSierpinski/build/CMakeFiles/CMakeTmp/Debug/cmTC_13b2c.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Anthony/Desktop/Grafica/-CG-2020-I-/4.TriangleSierpinski/build/CMakeFiles/CMakeTmp/Debug/cmTC_13b2c.lib" /MACHINE:X64   /machine:x64 cmTC_13b2c.dir\Debug\CMakeCXXCompilerABI.obj
+  cmTC_13b2c.vcxproj -> C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\CMakeTmp\Debug\cmTC_13b2c.exe
+FinalizeBuildStatus:
+  Se eliminará el archivo "cmTC_13b2c.dir\Debug\cmTC_13b2c.tlog\unsuccessfulbuild".
+  Aplicando tarea Touch a "cmTC_13b2c.dir\Debug\cmTC_13b2c.tlog\cmTC_13b2c.lastbuildstate".
+Compilación del proyecto terminada "C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\CMakeTmp\cmTC_13b2c.vcxproj" (destinos predeterminados).
+
+Compilación correcta.
+    0 Advertencia(s)
+    0 Errores
+
+Tiempo transcurrido 00:00:00.60
+
+
+
+
+Detecting CXX [] compiler features compiled with the following output:
+Change Dir: C:/Users/Anthony/Desktop/Grafica/-CG-2020-I-/4.TriangleSierpinski/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_38ddd.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine, versión 14.0.25420.1
+Copyright (C) Microsoft Corporation. Todos los derechos reservados.
+
+Compilación iniciada a las 28/04/2020 16:29:07.
+Proyecto "C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\CMakeTmp\cmTC_38ddd.vcxproj" en nodo 1 (destinos predeterminados).
+PrepareForBuild:
+  Creando directorio "cmTC_38ddd.dir\Debug\".
+  Creando directorio "C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\CMakeTmp\Debug\".
+  Creando directorio "cmTC_38ddd.dir\Debug\cmTC_38ddd.tlog\".
+InitializeBuildStatus:
+  Se creará "cmTC_38ddd.dir\Debug\cmTC_38ddd.tlog\unsuccessfulbuild" porque se especificó "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_38ddd.dir\Debug\\" /Fd"cmTC_38ddd.dir\Debug\vc140.pdb" /Gd /TP /errorReport:queue "C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\feature_tests.cxx"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24215.1 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_38ddd.dir\Debug\\" /Fd"cmTC_38ddd.dir\Debug\vc140.pdb" /Gd /TP /errorReport:queue "C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\feature_tests.cxx"
+  
+  feature_tests.cxx
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\CMakeTmp\Debug\cmTC_38ddd.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Anthony/Desktop/Grafica/-CG-2020-I-/4.TriangleSierpinski/build/CMakeFiles/CMakeTmp/Debug/cmTC_38ddd.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Anthony/Desktop/Grafica/-CG-2020-I-/4.TriangleSierpinski/build/CMakeFiles/CMakeTmp/Debug/cmTC_38ddd.lib" /MACHINE:X64   /machine:x64 cmTC_38ddd.dir\Debug\feature_tests.obj
+  cmTC_38ddd.vcxproj -> C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\CMakeTmp\Debug\cmTC_38ddd.exe
+FinalizeBuildStatus:
+  Se eliminará el archivo "cmTC_38ddd.dir\Debug\cmTC_38ddd.tlog\unsuccessfulbuild".
+  Aplicando tarea Touch a "cmTC_38ddd.dir\Debug\cmTC_38ddd.tlog\cmTC_38ddd.lastbuildstate".
+Compilación del proyecto terminada "C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\4.TriangleSierpinski\build\CMakeFiles\CMakeTmp\cmTC_38ddd.vcxproj" (destinos predeterminados).
+
+Compilación correcta.
+    0 Advertencia(s)
+    0 Errores
+
+Tiempo transcurrido 00:00:00.55
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates

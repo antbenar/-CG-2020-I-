@@ -1,0 +1,24 @@
+﻿  Building Custom Rule C:/Users/Anthony/Desktop/Grafica/-CG-2020-I-/6.1.OperacionesMatrices/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/Anthony/Desktop/Grafica/-CG-2020-I-/6.1.OperacionesMatrices/build/CMakeFiles/generate.stamp is up-to-date.
+  source.cpp
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.1.OperacionesMatrices\source.cpp(23): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.1.OperacionesMatrices\source.cpp(245): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.1.OperacionesMatrices\source.cpp(249): warning C4305: '-=': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.1.OperacionesMatrices\source.cpp(253): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.1.OperacionesMatrices\source.cpp(257): warning C4305: '-=': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.1.OperacionesMatrices\source.cpp(261): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.1.OperacionesMatrices\source.cpp(265): warning C4305: '-=': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.1.OperacionesMatrices\source.cpp(320): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.1.OperacionesMatrices\source.cpp(323): warning C4305: '-=': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.1.OperacionesMatrices\source.cpp(341): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.1.OperacionesMatrices\source.cpp(344): warning C4305: '-=': truncation from 'double' to 'float'
+  Matrix.cpp
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.1.OperacionesMatrices\Matrix.cpp(26): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.1.OperacionesMatrices\Matrix.cpp(27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.1.OperacionesMatrices\Matrix.cpp(28): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.1.OperacionesMatrices\Matrix.cpp(219): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.1.OperacionesMatrices\Matrix.cpp(220): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  glad.c
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  proyectito.vcxproj -> C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.1.OperacionesMatrices\build\Debug\proyectito.exe

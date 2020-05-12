@@ -1,0 +1,3 @@
+C:/Users/Anthony/Desktop/Grafica/-CG-2020-I-/3.ProyectoNaves(EvaFly)/build/CMakeFiles/proyectito.dir
+C:/Users/Anthony/Desktop/Grafica/-CG-2020-I-/3.ProyectoNaves(EvaFly)/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Anthony/Desktop/Grafica/-CG-2020-I-/3.ProyectoNaves(EvaFly)/build/CMakeFiles/ZERO_CHECK.dir

@@ -1,0 +1,3 @@
+C:/Users/Anthony/Desktop/Grafica/-CG-2020-I-/5.TwoTrianglesChangeColor/build2/CMakeFiles/helloWindow.dir
+C:/Users/Anthony/Desktop/Grafica/-CG-2020-I-/5.TwoTrianglesChangeColor/build2/CMakeFiles/ALL_BUILD.dir
+C:/Users/Anthony/Desktop/Grafica/-CG-2020-I-/5.TwoTrianglesChangeColor/build2/CMakeFiles/ZERO_CHECK.dir

@@ -1,0 +1,6 @@
+﻿  main.cpp
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\5.TwoTrianglesChangeColor\main.cpp(194): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\5.TwoTrianglesChangeColor\main.cpp(197): warning C4305: '-=': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\5.TwoTrianglesChangeColor\main.cpp(212): warning C4305: '-=': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\5.TwoTrianglesChangeColor\main.cpp(215): warning C4305: '+=': truncation from 'double' to 'float'
+  helloWindow.vcxproj -> C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\5.TwoTrianglesChangeColor\build2\Debug\helloWindow.exe

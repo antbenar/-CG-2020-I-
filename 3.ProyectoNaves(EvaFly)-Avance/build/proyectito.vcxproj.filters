@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\3.ProyectoNaves(EvaFly)\source.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\3.ProyectoNaves(EvaFly)\nave.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\3.ProyectoNaves(EvaFly)\game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\0.openglStuff\src\glad.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\naveEnemiga.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\3.ProyectoNaves(EvaFly)\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A25638C0-56A8-36AB-8A86-299EDAD8B433}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="headers">
+      <UniqueIdentifier>{86946126-d038-4d18-9125-3595154eff41}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\game.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\nave.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\naveEnemiga.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
