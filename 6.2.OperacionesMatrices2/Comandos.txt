@@ -1,0 +1,28 @@
+Comandos:
+	1 - Seleccionar Triangulo 1
+	2 - Seleccionar Triangulo 2
+	
+	Q - Mirror en X
+	W - Mirror en Y
+	E - Mirror en Z
+
+	X - Girar en un angulo de 15 grados en X
+	Y - Girar en un angulo de 15 grados en Y
+	Z - Girar en un angulo de 15 grados en Z
+
+
+Para realizar las transformaciones de rotación o traslación tienes que modificar el x, y e z con las teclas:
+- Para modificar X:
+	LEFT - Aumentar
+	RIGHT - Reducir
+- Para modificar Y:
+	UP - Aumentar
+	Down - Reducir
+- Para modificar Z:
+	- - Aumentar
+	+ - Reducir
+Despues de modificar los valores presionar segun la transformacion deseada y los vertices se modificaran segun los valores de x, y e z:
+	T - Traslacion
+	S - Escala
+
+	

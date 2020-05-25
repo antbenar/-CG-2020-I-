@@ -1,20 +1,5 @@
-﻿  Matrix.cpp
-C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\Matrix.cpp(26): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\Matrix.cpp(27): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\Matrix.cpp(28): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\Matrix.cpp(219): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\Matrix.cpp(220): warning C4018: '<': signed/unsigned mismatch
-  source.cpp
-C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\source.cpp(25): warning C4305: 'initializing': truncation from 'double' to 'float'
-C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\source.cpp(237): warning C4305: '+=': truncation from 'double' to 'float'
-C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\source.cpp(241): warning C4305: '-=': truncation from 'double' to 'float'
-C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\source.cpp(245): warning C4305: '+=': truncation from 'double' to 'float'
-C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\source.cpp(249): warning C4305: '-=': truncation from 'double' to 'float'
-C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\source.cpp(253): warning C4305: '+=': truncation from 'double' to 'float'
-C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\source.cpp(257): warning C4305: '-=': truncation from 'double' to 'float'
-C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\source.cpp(320): warning C4305: '+=': truncation from 'double' to 'float'
-C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\source.cpp(323): warning C4305: '-=': truncation from 'double' to 'float'
-C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\source.cpp(341): warning C4305: '+=': truncation from 'double' to 'float'
-C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\source.cpp(344): warning C4305: '-=': truncation from 'double' to 'float'
-  Generating Code...
+﻿  source.cpp
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\source.cpp(285): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\source.cpp(302): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\source.cpp(324): warning C4305: 'argument': truncation from 'double' to 'float'
   proyectito.vcxproj -> C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\build\Debug\proyectito.exe

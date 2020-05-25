@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\7. ExamenParcialPractico\build\CMakeFiles\aee452046aca8d5337321266be878d27\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{12B18BF2-26D8-3B1F-9EAF-FA8369F17B3E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

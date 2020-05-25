@@ -11,37 +11,33 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 // ------------------------------------------------------------------
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
-unsigned int currTriangle = 1;
 float rColor = 1.0f, gColor = 0.0f, bColor = 0.0f, alpha = 1.0f;
-float rColor2 = 1.0f, gColor2 = 1.0f, bColor2 = 0.0f, alpha2 = 1.0f;
+unsigned int operacion = 0;
+bool showTriangulo2 = false, showTriangulo3 = false;
 
 // settings Matriz
 // ------------------------------------------------------------------
 OperacionesMatriz* opMat;
-OperacionesMatriz* opMatSquare;
-
-float operacion = 1;// 1 - Scale, 2 - Traslation
-float x = 0.0, y = 0.0, z = 0.0;
-float theta = (15.0 / 180.0) * PI;
 
 // set up vertex data
 // ------------------------------------------------------------------
-float triangle[] = {
-	-0.7f, 0.2f, 0.0f,  // left 
-		0.7f, 0.2f, 0.0f,  // right
-		0.0f, 0.8f, 0.0f,  // top 
+float object[] = {
+		0.75,	-0.5,	0,
+		0.25,	 0.5,	0,
+		   0,	-0.5,	0
 };
 
-float square[] = {
-	-0.5f, -0.8f, 0.0f,  // left
-		0.5f, -0.8f, 0.0f,  // right
-		0.5f, 0.2f, 0.0f,   // top 
-		
-		0.5f, 0.2f, 0.0f,
-		-0.5f, 0.2f, 0.0f,
-		-0.5f, -0.8f, 0.0f
+float object2[] = {
+		0.75,	-0.5,	0,
+		0.25,	 0.5,	0,
+		0,		-0.5,	0
 };
-float* object = triangle;
+
+float object3[] = {
+		0.75,	-0.5,	0,
+		0.25,	 0.5,	0,
+		0,		-0.5,	0
+};
 
 
 // set shader sources
@@ -54,20 +50,25 @@ const char *vertexShaderSource = "#version 330 core\n"
 	"}\0";
 
 const char *fragmentShaderSource = "#version 330 core\n"
-	"out vec4 FragColor;\n"
-	"uniform vec4 Color1;\n"
-	"void main()\n"
-	"{\n"
-	"   FragColor = Color1;\n"
-	"}\n\0";
+"out vec4 FragColor;\n"
+"void main()\n"
+"{\n"
+"   FragColor = vec4(1.0f, 0.0f, 0.0f, 1.0f);\n"
+"}\n\0";
 
 const char *fragmentShaderSource2 = "#version 330 core\n"
-	"out vec4 FragColor;\n"
-	"uniform vec4 Color2;\n"
-	"void main()\n"
-	"{\n"
-	"   FragColor = Color2;\n"
-	"}\n\0";
+"out vec4 FragColor;\n"
+"void main()\n"
+"{\n"
+"   FragColor = vec4(1.0f, 1.0f, 0.0f, 1.0f);\n"
+"}\n\0";
+
+const char *fragmentShaderSource3 = "#version 330 core\n"
+"out vec4 FragColor;\n"
+"void main()\n"
+"{\n"
+"   FragColor = vec4(0.0f, 1.0f, 0.0f, 1.0f);\n"
+"}\n\0";
 
 int main()
 {
@@ -106,105 +107,146 @@ int main()
 	
 	// create Shaders
 	int vertexShader = glCreateShader(GL_VERTEX_SHADER);
+
 	int fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
-	int fragmentShader2 = glCreateShader(GL_FRAGMENT_SHADER);
 	int shaderProgram = glCreateProgram();
+
+	int fragmentShader2 = glCreateShader(GL_FRAGMENT_SHADER);
 	int shaderProgram2 = glCreateProgram();
-	
+
+	int fragmentShader3 = glCreateShader(GL_FRAGMENT_SHADER);
+	int shaderProgram3 = glCreateProgram();
 	
 	// compile shaders
 	glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
 	glCompileShader(vertexShader);
+
 	glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
 	glCompileShader(fragmentShader);
+
 	glShaderSource(fragmentShader2, 1, &fragmentShaderSource2, NULL);
 	glCompileShader(fragmentShader2);
+
+	glShaderSource(fragmentShader3, 1, &fragmentShaderSource3, NULL);
+	glCompileShader(fragmentShader3);
 	
-	
+
 	// link shaders
 	glAttachShader(shaderProgram, vertexShader);
 	glAttachShader(shaderProgram, fragmentShader);
 	glLinkProgram(shaderProgram);
-	
+
 	glAttachShader(shaderProgram2, vertexShader);
 	glAttachShader(shaderProgram2, fragmentShader2);
 	glLinkProgram(shaderProgram2);
+
+	glAttachShader(shaderProgram3, vertexShader);
+	glAttachShader(shaderProgram3, fragmentShader3);
+	glLinkProgram(shaderProgram3);
 	
+	// Delete Shaders
 	glDeleteShader(vertexShader);
 	glDeleteShader(fragmentShader);
 	glDeleteShader(fragmentShader2);
+	glDeleteShader(fragmentShader3);
+
+
+	unsigned int VBO[3], VAO[3];
+	glGenVertexArrays(3, VAO);
+	glGenBuffers(3, VBO);
 	
-	unsigned int VBOs[2], VAOs[2];
-	glGenVertexArrays(2, VAOs);
-	glGenBuffers(2, VBOs);
-	
-	// first triangle setup
+	// triangle setup
 	// --------------------
-	glBindVertexArray(VAOs[0]);
-	glBindBuffer(GL_ARRAY_BUFFER, VBOs[0]);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(triangle), triangle, GL_STATIC_DRAW);
+	glBindVertexArray(VAO[0]);
+	glBindBuffer(GL_ARRAY_BUFFER, VBO[0]);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(object), object, GL_STATIC_DRAW);
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
-	
-	
-	// second triangle setup
-	// ---------------------
-	glBindVertexArray(VAOs[1]);	
-	glBindBuffer(GL_ARRAY_BUFFER, VBOs[1]);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(square), square, GL_STATIC_DRAW);
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void*)0); // because the vertex data is tightly packed we can also specify 0 as the vertex attribute's stride to let OpenGL figure it out
+
+	// triangle2 setup
+	// --------------------
+	glBindVertexArray(VAO[1]);
+	glBindBuffer(GL_ARRAY_BUFFER, VBO[1]);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(object2), object2, GL_STATIC_DRAW);
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+	glEnableVertexAttribArray(0);
+
+	// triangle3 setup
+	// --------------------
+	glBindVertexArray(VAO[2]);
+	glBindBuffer(GL_ARRAY_BUFFER, VBO[2]);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(object3), object3, GL_STATIC_DRAW);
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
 	
 	// Crear objeto OperacionesMatriz
 	opMat = new OperacionesMatriz(3,3);
-	opMatSquare = new OperacionesMatriz(3,6);
-	
+
 	// render loop
 	// -----------
 	while (!glfwWindowShouldClose(window))
 	{
-		
 		// render
 		// ------
 		glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
-		
-		//---------------------------triangulo1
-		int vertexColorLocation = glGetUniformLocation(shaderProgram, "Color1");
-		glUniform4f(vertexColorLocation, rColor*alpha, gColor*alpha, bColor*alpha, 1.0f);
-		
-		// enlazar nuevos datos
-		glBindVertexArray(VAOs[0]);
-		glBindBuffer(GL_ARRAY_BUFFER, VBOs[0]);
-		glBufferData(GL_ARRAY_BUFFER, sizeof(triangle), triangle, GL_STATIC_DRAW);
-		// dibujar
-		glUseProgram(shaderProgram);
-		glBindVertexArray(VAOs[0]);
+
+		//---------------------------triangulo 3
+		// --enlazar nuevos datos
+		glBindVertexArray(VAO[2]);
+		glBindBuffer(GL_ARRAY_BUFFER, VBO[2]);
+		glBufferData(GL_ARRAY_BUFFER, sizeof(object3), object3, GL_STATIC_DRAW);
+		// --dibujar
+		glUseProgram(shaderProgram3);
+		glBindVertexArray(VAO[2]);
 		glDrawArrays(GL_TRIANGLES, 0, 3);
-		
-		
-		
-		//---------------------------triangulo2
-		int vertexColorLocation2 = glGetUniformLocation(shaderProgram2, "Color2");
-		glUniform4f(vertexColorLocation2, rColor2*alpha2, gColor2*alpha2, bColor2*alpha2, 1.0f);
-		
-		// enlazar nuevos datos
-		glBindVertexArray(VAOs[1]);
-		glBindBuffer(GL_ARRAY_BUFFER, VBOs[1]);
-		glBufferData(GL_ARRAY_BUFFER, sizeof(square), square, GL_STATIC_DRAW);
-		// dibujar
+
+
+		//---------------------------triangulo 1
+		// --enlazar nuevos datos
+		glBindVertexArray(VAO[0]);
+		glBindBuffer(GL_ARRAY_BUFFER, VBO[0]);
+		glBufferData(GL_ARRAY_BUFFER, sizeof(object), object, GL_STATIC_DRAW);
+		// --dibujar
 		glUseProgram(shaderProgram);
-		glBindVertexArray(VAOs[1]);
-		glDrawArrays(GL_TRIANGLES, 0, 6);
+		glBindVertexArray(VAO[0]);
+		glDrawArrays(GL_TRIANGLES, 0, 3);
+
+		//---------------------------triangulo 2
+		if (showTriangulo2) {
+			// --enlazar nuevos datos
+			glBindVertexArray(VAO[1]);
+			glBindBuffer(GL_ARRAY_BUFFER, VBO[1]);
+			glBufferData(GL_ARRAY_BUFFER, sizeof(object2), object2, GL_STATIC_DRAW);
+			// --dibujar
+			glUseProgram(shaderProgram2);
+			glBindVertexArray(VAO[1]);
+			glDrawArrays(GL_TRIANGLES, 0, 3);
+		}
+
+
+		//---------------------------triangulo 3
+		if (showTriangulo3) {
+			// --enlazar nuevos datos
+			glBindVertexArray(VAO[2]);
+			glBindBuffer(GL_ARRAY_BUFFER, VBO[2]);
+			glBufferData(GL_ARRAY_BUFFER, sizeof(object3), object3, GL_STATIC_DRAW);
+			// --dibujar
+			glUseProgram(shaderProgram3);
+			glBindVertexArray(VAO[2]);
+			glDrawArrays(GL_TRIANGLES, 0, 3);
+		}
 		
+
+		//-----------------Swap buffers
 		glfwSwapBuffers(window);
 		glfwPollEvents();
 	}
 	
 	// optional: de-allocate all resources once they've outlived their purpose:
 	// ------------------------------------------------------------------------
-	glDeleteVertexArrays(2, VAOs);
-	glDeleteBuffers(2, VBOs);
+	glDeleteVertexArrays(1, VAO);
+	glDeleteBuffers(1, VBO);
 	
 	// glfw: terminate, clearing all previously allocated GLFW resources.
 	// ------------------------------------------------------------------
@@ -216,141 +258,96 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 {
 	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
 		glfwSetWindowShouldClose(window, true);
-	
-	if (key == GLFW_KEY_1 && action == GLFW_PRESS) {
-		currTriangle = 1;
-		object = triangle;
-		std::cout << "Triangulo 1 Seleccionado" << std::endl;
-	}
-	else if (key == GLFW_KEY_2 && action == GLFW_PRESS) {
-		currTriangle = 2;
-		object = square;
-		std::cout << "Triangulo 2 Seleccionado" << std::endl;
-	}
-	
-	//--------------------keys to modify x, y, z
+
 	if (key == GLFW_KEY_SPACE && action == GLFW_PRESS) {
-		x = 1; y = 1; z = 1;
-		std::cout << "Modificacion x, y, z: x(" << x << "), y(" << y << "), z(" << z << ")" << std::endl;
-	}
-	else if (key == GLFW_KEY_RIGHT && action == GLFW_PRESS) {
-		x += 0.05;
-		std::cout << "Modificacion x: x(" << x << "), y(" << y << "), z(" << z << ")" << std::endl;
-	}
-	else if (key == GLFW_KEY_LEFT && action == GLFW_PRESS) {
-		x -= 0.05;
-		std::cout << "Modificacion x: x(" << x << "), y(" << y << "), z(" << z << ")" << std::endl;
-	}
-	else if (key == GLFW_KEY_UP && action == GLFW_PRESS) {
-		y += 0.05;
-		std::cout << "Modificacion y: x(" << x << "), y(" << y << "), z(" << z << ")" << std::endl;
-	}
-	else if (key == GLFW_KEY_DOWN && action == GLFW_PRESS) {
-		y -= 0.05;
-		std::cout << "Modificacion y: x(" << x << "), y(" << y << "), z(" << z << ")" << std::endl;
-	}
-	else if (key == GLFW_KEY_KP_ADD && action == GLFW_PRESS) {
-		z += 0.05;
-		std::cout << "Modificacion z: x(" << x << "), y(" << y << "), z(" << z << ")" << std::endl;
-	}
-	else if (key == GLFW_KEY_KP_SUBTRACT && action == GLFW_PRESS) {
-		z -= 0.05;
-		std::cout << "Modificacion z: x(" << x << "), y(" << y << "), z(" << z << ")" << std::endl;
-	}
-	
-	
-	// -------Matrix Operations
-	// Escala
-	if (key == GLFW_KEY_S && action == GLFW_PRESS) {
-		std::cout << "Scala: x(" << x << "), y(" << y << "), z(" << z << ")" << std::endl;
-		opMat->Scale(triangle, x, y, z, false);
-		opMatSquare->Scale(square, x, y, z, false);
-	}
-	else if (key == GLFW_KEY_T && action == GLFW_PRESS) {
-		std::cout << "Traslacion: x(" << x << "), y(" << y << "), z(" << z << ")" << std::endl;
-		opMat->Traslation(triangle, x, y, z, false);
-		opMatSquare->Traslation(square, x, y, z, false);
-	}
-	else if (key == GLFW_KEY_X && action == GLFW_PRESS) {
-		std::cout << "Rotacion en X" << std::endl;
-		opMat->rotateX(triangle, theta, false);
-		opMatSquare->rotateX(square, theta, false);
-	}
-	else if (key == GLFW_KEY_Y && action == GLFW_PRESS) {
-		std::cout << "Rotacion en Y" << std::endl;
-		opMat->rotateY(triangle, theta, false);
-		opMatSquare->rotateY(square, theta, false);
-	}
-	else if (key == GLFW_KEY_Z && action == GLFW_PRESS) {
-		std::cout << "Rotacion en Z" << std::endl;
-		opMat->rotateZ(triangle, theta, false);
-		opMatSquare->rotateZ(square, theta, false);
-	}
-	else if (key == GLFW_KEY_Q && action == GLFW_PRESS) {
-		std::cout << "Reflejo en X" << std::endl;
-		opMat->mirrorX(triangle, false);
-		opMatSquare->mirrorX(square, false);
-	}
-	else if (key == GLFW_KEY_W && action == GLFW_PRESS) {
-		std::cout << "Reflejo en Y" << std::endl;
-		opMat->mirrorY(triangle, false);
-		opMatSquare->mirrorY(square, false);
-	}
-	else if (key == GLFW_KEY_E && action == GLFW_PRESS) {
-		std::cout << "Reflejo en Z" << std::endl;
-		opMat->mirrorZ(triangle, false);
-		opMatSquare->mirrorZ(square, false);
-	}
-	
-	// ------------------------colores triangulo
-	if (currTriangle == 1) {
-		if (key == GLFW_KEY_R && action == GLFW_PRESS) {
-			if (rColor == 1.0) rColor = 0;
-			else rColor = 1.0;
+		/*
+			Al realizar una transofrmacion y pasarle a la funcion true en el ultimo paramtero, 
+			hará que se almacene esa tranformacion en mi matriz de combinacion de transformaciones.
+
+			La funcion restartMatrizCombinacion permite igualar mi matriz combinacion a la matriz identidad
+		*/
+
+		if (operacion == 0) {
+			std::cout << "__________Matrices de las Transformaciones Basicas____________" << std::endl;
+
+			opMat->rotateX(object, 46, true);
+			opMat->printMatrix( 4, 4, opMat->matCombinacion, "Matriz Rotacion en X");
+			opMat->restartMatrizCombinacion();
+
+			opMat->rotateY(object, 17, true);
+			opMat->printMatrix(4, 4, opMat->matCombinacion, "Matriz Rotacion en Y");
+			opMat->restartMatrizCombinacion();
+
+			opMat->rotateZ(object, 55, true);
+			opMat->printMatrix(4, 4, opMat->matCombinacion, "Matriz Rotacion en Z");
+			opMat->restartMatrizCombinacion();
+
+			opMat->Traslation(object, 0.16, 0.27, 0.075, true);
+			opMat->printMatrix(4, 4, opMat->matCombinacion, "Matriz de Traslacion");
+			opMat->restartMatrizCombinacion();
+
+			opMat->Scale(object, 1, 1.25, 1.25, true);
+			opMat->printMatrix(4, 4, opMat->matCombinacion, "Matriz de Escala");
+			opMat->restartMatrizCombinacion();
+
+			++operacion;
 		}
-		else if (key == GLFW_KEY_G && action == GLFW_PRESS) {
-			if (gColor == 1.0) gColor = 0;
-			else gColor = 1.0;
+		else if (operacion == 1) {
+			std::cout << "________________Inicio de Matrices Transformacion1_________________" << std::endl;
+
+			opMat->Scale(object2, 1, 1.25, 1.25, true);
+			opMat->rotateY(object2, 17, true);
+			opMat->printMatrix(4, 4, opMat->matCombinacion, "S*Ry");
+
+			opMat->Traslation(object2, 0.16, 0.27, 0.075, true);
+			opMat->printMatrix(4, 4, opMat->matCombinacion, "T*(S*Ry)");
+
+			opMat->rotateZ(object2, 55, true);
+			opMat->printMatrix(4, 4, opMat->matCombinacion, "Rz*(T*(S*Ry))");
+
+			//--------Aplicacion de la transformacion
+			std::cout << std::endl << "------------------------------------------------" << std::endl;
+			std::cout << "(Aplicacion de Transformacion 2)[coordenadas de los vertices transformados]" << std::endl;
+			opMat->TransformarConMatrizCombinacion(object2);//los vertices se imprimen en la funcion TransformarConMatrizCombinacion
+
+			showTriangulo2 = true;
+			opMat->restartMatrizCombinacion();
+			++operacion;
 		}
-		else if (key == GLFW_KEY_B && action == GLFW_PRESS) {
-			if (bColor == 1.0) bColor = 0;
-			else bColor = 1;
-		}
-		else if (key == GLFW_KEY_N && action == GLFW_PRESS) {
-			if (alpha < 1.0) alpha += 0.1;
-		}
-		else if (key == GLFW_KEY_M && action == GLFW_PRESS) {
-			if (alpha > 0.0) alpha -= 0.1;
+		else if (operacion == 2) {
+			std::cout << "________________Inicio de Matrices Transformacion2_________________" << std::endl;
+
+			opMat->Scale(object3, 1, 1.25, 1.25, true);
+			opMat->rotateY(object3, 17, true);
+			opMat->printMatrix(4, 4, opMat->matCombinacion, "S*Ry");
+
+			opMat->Traslation(object3, 0.16, 0.27, 0.075, true);
+			opMat->printMatrix(4, 4, opMat->matCombinacion, "T*(S*Ry)");
+
+			opMat->rotateX(object3, 46, true);
+			opMat->printMatrix(4, 4, opMat->matCombinacion, "Rx*(T*(S*Ry))");
+
+			opMat->rotateZ(object3, 55, true);
+			opMat->printMatrix(4, 4, opMat->matCombinacion, "Rz*(Rx*(T*(S*Ry)))");
+
+			opMat->rotateY(object3, 17, true);
+			opMat->printMatrix(4, 4, opMat->matCombinacion, "Ry*(Rz*(Rx*(T*(S*Ry))))");
+
+			//--------Aplicacion de la transformacion
+			std::cout << std::endl << "------------------------------------------------" << std::endl;
+			std::cout << "(Aplicacion de Transformacion 2)[coordenadas de los vertices transformados]" << std::endl;
+			opMat->TransformarConMatrizCombinacion(object3);//los vertices se imprimen en la funcion TransformarConMatrizCombinacion
+
+			showTriangulo3 = true;
+			opMat->restartMatrizCombinacion();
+			++operacion;
 		}
 	}
-	
-	else if (currTriangle == 2) {
-		if (key == GLFW_KEY_R && action == GLFW_PRESS) {
-			if (rColor2 == 1.0) rColor2 = 0;
-			else rColor2 = 1.0;
-		}
-		else if (key == GLFW_KEY_G && action == GLFW_PRESS) {
-			if (gColor2 == 1.0) gColor2 = 0;
-			else gColor2 = 1.0;
-		}
-		else if (key == GLFW_KEY_B && action == GLFW_PRESS) {
-			if (bColor2 == 1.0) bColor2 = 0;
-			else bColor2 = 1;
-		}
-		else if (key == GLFW_KEY_N && action == GLFW_PRESS) {
-			if(alpha2 < 1.0) alpha2 += 0.1;
-		}
-		else if (key == GLFW_KEY_M && action == GLFW_PRESS) {
-			if (alpha2 > 0.0) alpha2 -= 0.1;
-		}
-	}	
 }
 
-// glfw: whenever the window size changed (by OS or user resize) this callback function executes
-// ---------------------------------------------------------------------------------------------
+
+
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
-	// make sure the viewport matches the new window dimensions; note that width and 
-	// height will be significantly larger than specified on retina displays.
 	glViewport(0, 0, width, height);
 }

@@ -1,0 +1,14 @@
+﻿  source.cpp
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\source.cpp(25): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\source.cpp(171): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\source.cpp(256): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\source.cpp(260): warning C4305: '-=': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\source.cpp(264): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\source.cpp(268): warning C4305: '-=': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\source.cpp(272): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\source.cpp(276): warning C4305: '-=': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\source.cpp(331): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\source.cpp(334): warning C4305: '-=': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\source.cpp(352): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\source.cpp(355): warning C4305: '-=': truncation from 'double' to 'float'
+  proyectito.vcxproj -> C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\6.2.OperacionesMatrices2\build\Debug\proyectito.exe

@@ -4,11 +4,11 @@
 #include <iostream>
 #include <vector>
 #include <math.h> 
+#include <string>
+#include <iomanip>
 
 class OperacionesMatriz {
 private:
-	float* matCombinacion;// donde se almacenan varias combinaciones
-
 	unsigned int dimN;	// matriz de vertice Nx1 
 						// => matriz de tranformacion MxN (M=N+1)
 	unsigned int numVertexes; // numero de vertices a calcular en un array 
@@ -18,6 +18,8 @@ private:
 	void TransformacionXVertices(float* transformacion, float* vertices);
 	
 public:
+	float* matCombinacion;// donde se almacenan varias combinaciones
+
 	OperacionesMatriz(unsigned int dimN, unsigned int numVertexes);
 	void restartMatrizCombinacion();
 
@@ -35,5 +37,6 @@ public:
 	void mirrorZ(float* vertices, bool combinacion);
 
 	void printMatrix(int dimM, int dimN, float* vertices);
+	void printMatrix(int dimM, int dimN, float* vertices, std::string matName);
 
 };

@@ -1,0 +1,23 @@
+﻿  source.cpp
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\7. ExamenParcialPractico\source.cpp(21): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\7. ExamenParcialPractico\source.cpp(23): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\7. ExamenParcialPractico\source.cpp(25): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\7. ExamenParcialPractico\source.cpp(39): warning C4838: conversion from 'double' to 'float' requires a narrowing conversion
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\7. ExamenParcialPractico\source.cpp(39): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\7. ExamenParcialPractico\source.cpp(51): warning C4838: conversion from 'double' to 'float' requires a narrowing conversion
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\7. ExamenParcialPractico\source.cpp(51): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\7. ExamenParcialPractico\source.cpp(63): warning C4838: conversion from 'double' to 'float' requires a narrowing conversion
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\7. ExamenParcialPractico\source.cpp(63): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\7. ExamenParcialPractico\source.cpp(119): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\7. ExamenParcialPractico\source.cpp(120): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\7. ExamenParcialPractico\source.cpp(138): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\7. ExamenParcialPractico\source.cpp(150): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\7. ExamenParcialPractico\source.cpp(162): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\7. ExamenParcialPractico\source.cpp(174): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\7. ExamenParcialPractico\source.cpp(405): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\7. ExamenParcialPractico\source.cpp(409): warning C4305: '-=': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\7. ExamenParcialPractico\source.cpp(415): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\7. ExamenParcialPractico\source.cpp(419): warning C4305: '-=': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\7. ExamenParcialPractico\source.cpp(425): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\7. ExamenParcialPractico\source.cpp(429): warning C4305: '-=': truncation from 'double' to 'float'
+  proyectito.vcxproj -> C:\Users\Anthony\Desktop\Grafica\-CG-2020-I-\7. ExamenParcialPractico\build\Debug\proyectito.exe

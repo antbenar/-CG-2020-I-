@@ -53,37 +53,34 @@ void OperacionesMatriz::TransformacionXVertices(float* transformacion, float* ve
 	for (unsigned int i = 0; i < numVertexes*dimN; i += dimN, iter += dimN) {
 		float* tempMat = genVec(vertices + i);
 
-		printMatrix(1, dimN, vertices + i);//----imprimir
+		//printMatrix(1, dimN, vertices + i);//----imprimir
 		tempMat = mult(transformacion, tempMat, dimN + 1, 1, dimN + 1);//i = dimN + 1, k = dimN + 1, j = 1
 
-																// copy form tempMat to vertice
+																// copy from tempMat to vertice
 		for (unsigned int j = 0; j < dimN; ++j) {
 			vertices[i + j] = tempMat[j];
 		}
-
+		/*
 		std::cout << "--------------------------" << std::endl;//----imprimir
 		printMatrix(1, dimN, vertices + i);//----imprimir
 		std::cout << "__________________________" << std::endl;//----imprimir
+		*/
 	}
 }
 
 void OperacionesMatriz::TransformarConMatrizCombinacion(float* vertices) {
 	float* iter = vertices;
 
-	for (unsigned int i = 0; i < numVertexes*dimN; i += dimN, iter += dimN) {
+	for (unsigned int i = 0; i < numVertexes*dimN; i += dimN, iter += dimN) {//calcular vertice por vertice
 		float* tempMat = genVec(vertices + i);
 
-		printMatrix(1, dimN, vertices + i);//----imprimir
 		tempMat = mult(matCombinacion, tempMat, dimN + 1, 1, dimN + 1);//i = dimN + 1, k = dimN + 1, j = 1
-
-																	   // copy form tempMat to vertice
-		for (unsigned int j = 0; j < dimN; ++j) {
+		printMatrix(1, dimN+1, tempMat);//----imprimir el vertice calculado
+																	  
+		for (unsigned int j = 0; j < dimN; ++j) { // copy from tempMat to vertice
 			vertices[i + j] = tempMat[j];
 		}
 
-		std::cout << "--------------------------" << std::endl;//----imprimir
-		printMatrix(1, dimN, vertices + i);//----imprimir
-		std::cout << "__________________________" << std::endl;//----imprimir
 	}
 }
 
@@ -93,7 +90,7 @@ void OperacionesMatriz::Scale(float* vertices, float Sx, float Sy, float Sz, boo
 							0, 0, Sz, 0,
 							0, 0, 0, 1 };
 	if (combinacion) {
-		matCombinacion = mult(matCombinacion, scaleMat, dimN + 1, dimN + 1, dimN + 1);
+		matCombinacion = mult(scaleMat, matCombinacion , dimN + 1, dimN + 1, dimN + 1);
 	}
 	else {
 		TransformacionXVertices(scaleMat, vertices);
@@ -109,7 +106,7 @@ void OperacionesMatriz::Traslation(float* vertices, float Sx, float Sy, float Sz
 							0, 0, 0, 1 };
 
 	if (combinacion) {
-		matCombinacion = mult(matCombinacion, TraslMat, dimN + 1, dimN + 1, dimN + 1);
+		matCombinacion = mult(TraslMat, matCombinacion, dimN + 1, dimN + 1, dimN + 1);
 	}
 	else {
 		TransformacionXVertices(TraslMat, vertices);
@@ -123,9 +120,9 @@ void OperacionesMatriz::rotateZ(float* vertices, float theta, bool combinacion) 
 						sin(theta),	cos(theta)     ,	0, 0,
 						0		  , 0		       ,	1, 0,
 						0		  , 0			   ,	0, 1};
-	
+
 	if (combinacion) {
-		matCombinacion = mult(matCombinacion, matRotZ, dimN + 1, dimN + 1, dimN + 1);
+		matCombinacion = mult(matRotZ, matCombinacion, dimN + 1, dimN + 1, dimN + 1);
 	}
 	else {
 		TransformacionXVertices(matRotZ, vertices);
@@ -139,12 +136,14 @@ void OperacionesMatriz::rotateX(float* vertices, float theta, bool combinacion) 
 						0,	sin(theta),	cos(theta)     , 0,
 						0,	0		  ,	0			   , 1};
 
+
 	if (combinacion) {
-		matCombinacion = mult(matCombinacion, matRotX, dimN + 1, dimN + 1, dimN + 1);
+		matCombinacion = mult(matRotX, matCombinacion, dimN + 1, dimN + 1, dimN + 1);
 	}
 	else {
 		TransformacionXVertices(matRotX, vertices);
 	}
+
 
 }
 
@@ -155,8 +154,9 @@ void OperacionesMatriz::rotateY(float* vertices, float theta, bool combinacion) 
 					    -sin(theta),	0,	cos(theta), 0,
 						0		   ,	0,	0		  , 1};
 
+
 	if (combinacion) {
-		matCombinacion = mult(matCombinacion, matRotY, dimN + 1, dimN + 1, dimN + 1);
+		matCombinacion = mult(matRotY, matCombinacion, dimN + 1, dimN + 1, dimN + 1);
 	}
 	else {
 		TransformacionXVertices(matRotY, vertices);
@@ -172,7 +172,7 @@ void OperacionesMatriz::mirrorX(float* vertices, bool combinacion) {
 							 0, 0, 0, 1 };
 
 	if (combinacion) {
-		matCombinacion = mult(matCombinacion, matMirror, dimN + 1, dimN + 1, dimN + 1);
+		matCombinacion = mult(matMirror, matCombinacion, dimN + 1, dimN + 1, dimN + 1);
 	}
 	else {
 		TransformacionXVertices(matMirror, vertices);
@@ -188,7 +188,7 @@ void OperacionesMatriz::mirrorY(float* vertices, bool combinacion) {
 							0,	0, 0, 1};
 
 	if (combinacion) {
-		matCombinacion = mult(matCombinacion, matMirror, dimN + 1, dimN + 1, dimN + 1);
+		matCombinacion = mult(matMirror, matCombinacion, dimN + 1, dimN + 1, dimN + 1);
 	}
 	else {
 		TransformacionXVertices(matMirror, vertices);
@@ -204,7 +204,7 @@ void OperacionesMatriz::mirrorZ(float* vertices, bool combinacion) {
 							0, 0,  0, 1};
 
 	if (combinacion) {
-		matCombinacion = mult(matCombinacion, matMirror, dimN + 1, dimN + 1, dimN + 1);
+		matCombinacion = mult(matMirror, matCombinacion, dimN + 1, dimN + 1, dimN + 1);
 	}
 	else {
 		TransformacionXVertices(matMirror, vertices);
@@ -219,6 +219,19 @@ void OperacionesMatriz::printMatrix(int dimM, int dimN, float* vertices) {
 	for (unsigned int i = 0; i < dimM; ++i) {
 		for (unsigned int j = 0; j < dimN; ++j) {
 			std::cout << vertices[i*dimN + j] << ", ";
+		}
+		std::cout << std::endl;
+	}
+}
+
+void OperacionesMatriz::printMatrix(int dimM, int dimN, float* vertices, std::string matName) {
+
+	std::cout << std::endl << "------------------------------------------------" << std::endl;
+	std::cout << "Matriz " << matName << std::endl;
+
+	for (unsigned int i = 0; i < dimM; ++i) {
+		for (unsigned int j = 0; j < dimN; ++j) {
+			std::cout << std::setprecision(3) << vertices[i*dimN + j] << ",\t";
 		}
 		std::cout << std::endl;
 	}
